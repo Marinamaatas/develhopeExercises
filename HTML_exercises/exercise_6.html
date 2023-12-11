@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+<!--Create a registration form. The form should have the following fields:
+* Email
+* Password
+* Name and Lastname
+* Date of birth
+* Telephone number
+* A select for choosing plans: free plan, a group of 3 plans with increasing price, and a checkbox for a Pro Plan
+* Credit card number
+* CVC
+* Expiration date
+* Billing Address -->
+  <body>
+    <form>
+      <fieldset name="personal-data">
+        <label name="email">Email </label><input name="email" type="email"/>
+        <label name="password">Password</label><input name="password" type="password"/>
+        <label name="first-name">First Name</label><input name="first-name" type="text"/>
+        <label name="last-name">Last Name</label><input name="last-name" type="text"/>
+        <label name="date-of-birth">Date of birth</label><input name="date-of-birth" type="date"/>
+        <label name="telephone-number" min-heigth="9">Telephone Number</label><input name="telephone-number" type="tel"/>
+      </fieldset>
+      <fieldset name="activity">
+        <label name="activity-selector"> Choose your plan</label>
+        <select name="preferences">
+        <optgroup name="preferences">
+            <option name="null" value="">Select one</option>
+            <option name="free-plan" value="free-plan">Free plan</option>
+            <option name="group-of-3" value="group-of-3">A group of 3 plans with increasing price</option>
+          </optgroup>
+        </select>
+        <label name="checkbox">A checkbox for a Pro Plan</label><input name="checkbox" type="checkbox" />
+      </fieldset>
+      <fieldset name="pay-information">
+        <label name="credit-card-number">Credit card number</label><input type="number"/>
+        <label name="CVC">CVC<input /></label>
+        <label name="expiration-date">Expiration Date</label><input type="date"/>
+        <label name="billing-address">Billing address</label><input type="text"/>
+
+      </fieldset>
+      <input type="submit" />
+    </form>
+  </body>
+</html>
