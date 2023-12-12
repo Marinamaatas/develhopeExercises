@@ -14,12 +14,20 @@ For the links try to use a not ordered list.-->
     <title>HTML lesson</title>
   </head>
   <body>
+    <!--Fijate que cada elemento represente lo que se ve en la imagen. 
+      Por ejemplo el link deberia ser un a, el dropdown un select. 
+      Y además, para luego facilitar la estilizacion, el home, 
+      link, dropdown y disable seria mejor meterlos en un contenedor.-->
     <nav>
       <h1>Navbar</h1>
+      <div id="navbarContainer">
       <h3>Home</h3>
-      <p>Link</p>
-      <p>Dropdown</p>
-      <h5>Disabled</h5>
+      <a href="https://www.w3schools.com/">Link</a>
+      <select>
+        <option>Dropdown</option>
+      </select>
+      <span disabled>Disabled</span>
+    </div>
       <label><input placeholder="Search"/></label>
       <button>Search</button>
     </nav>
