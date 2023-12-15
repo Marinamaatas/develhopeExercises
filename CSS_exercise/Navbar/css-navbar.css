@@ -4,24 +4,23 @@
 }
 
 nav {
-    display: flex;
+    display: flex; /*display block?*/
     flex-direction: row;
     align-items: center;
     background-color: rgb(64, 63, 63);
-    width: 800px;
+    width: 100%;
     height: 50px;
     border-bottom: 3px green solid;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 h4 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
 }
 
 h1 {
     margin: 10px;
     font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
 }
 
@@ -29,7 +28,6 @@ h1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 10px;
     color: white;  
 }
@@ -45,7 +43,6 @@ h1 {
     border: none;
     color: grey;
     font-size: 16px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 #navbarContainer span {
     color: rgba(121, 120, 120, 0.509);
@@ -60,7 +57,6 @@ h1 {
     margin-left: 20px;
 }
 #search {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 10px;
     margin-left: 50px;
     margin-top: 15px;
@@ -71,17 +67,21 @@ h1 {
     height: 30px;
     border-radius: 4px;
     border: none;
-  }
+}
+
 button {
     border: 1px green solid;
     background-color: transparent;
     height: 30px;
     width: 70px;
     color: green;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
     border-radius: 8%;
 }
+ button:hover{
+    background-color: green;
+    color: white;
+ }
 
 button::placeholder {
     padding-left: 10px;
@@ -90,6 +90,5 @@ button::placeholder {
 #searchArea::placeholder{
     padding-left: 10px;
     font-size: 17px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
