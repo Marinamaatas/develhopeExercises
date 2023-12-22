@@ -1,0 +1,69 @@
+body{   
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+#green {
+    width: 10%;
+    background-color: lightgreen;
+    height: 100vh;
+    order: 1;
+}
+#red {
+    width: 15%;
+    background-color: lightcoral;
+    height: 100vh;
+    order: 0;
+    
+}
+
+#yellow {
+    width: 15%;
+    background-color: lightyellow;
+    height: 100vh;
+    order: 0;
+}
+
+#orange {
+    width: 35%;
+    background-color: lightsalmon;
+    height: 100vh;
+    order: 2;
+}
+
+#blue {
+    width: 10%;
+    background-color: lightblue;
+    height: 100vh;
+    order: 3;
+}
+
+ul li{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    margin-bottom: 15px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#yellow ul, #red ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+}
+
+
+
