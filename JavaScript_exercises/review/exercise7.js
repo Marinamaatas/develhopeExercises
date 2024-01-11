@@ -2,7 +2,9 @@ function printName() {
     let helloName = "Hello John";
   
     function inner() {
-      console.log(helloName);
+      setTimeout(() => {
+        console.log(helloName);
+      }, 1000);
     }
   
     return inner;
@@ -10,6 +12,4 @@ function printName() {
   
   const printHelloJohn = printName();
   
-  setTimeout(() => {
     printHelloJohn();
-  }, 1000);
