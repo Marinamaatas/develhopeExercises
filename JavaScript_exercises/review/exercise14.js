@@ -1,11 +1,19 @@
 function uncompletedNotes(notes) {
     const result = [];
-    notes.forEach(note => {
-        const uncompletedTodos = note.todos.filter(todo => !todo.done); 
-        result.push(uncompletedTodos);
+  
+    notes.forEach((note) => {
+      const uncompletedTodos = note.todos.filter((todo) => !todo.done);
+      result.push({
+        id: note.id,
+        description: note.description,
+      });
+      result.push(uncompletedTodos)
     });
+  
     return result;
   }
+  
+
 /*Create a function called `uncompletedNotes` that returns only not completed todos.
 
 **Suggestion** Use the forEach and filter arrays methods.*/
