@@ -22,21 +22,17 @@ class Square {
     }
   }
   
-  class AreaCalculator {
-    constructor(figure) {
-      this.figure = figure;
-    }
-  
-    calculate() {
-      if (this.figure instanceof Square) 
-        return this.figure.side * this.figure.side;
-      else if (this.figure instanceof Circle)
+  class AreaCalculator  {
+   static calculate(figure) {
+      if (figure instanceof Square) 
+        return figure.side * figure.side;
+      else if (figure instanceof Circle)
       {
         const piValue = Math.PI;
-        return 2 * piValue * this.figure.radius;
+        return 2 * piValue * figure.radius;
       }
-      else if (this.figure instanceof Rectangle)
-        return this.figure.width * this.figure.height;
+      else if (figure instanceof Rectangle)
+        return figure.width * figure.height;
     else
         return "It is not an available figure";
     }
@@ -47,10 +43,6 @@ class Square {
   const rectangle = new Rectangle(4, 2);
   const circle = new Circle(5);
   
-  const calculatorSquare = new AreaCalculator(square);
-  const calculatorRectangle = new AreaCalculator(rectangle);
-  const calculatorCircle = new AreaCalculator(circle);
-  
-  console.log(calculatorSquare.calculate());  
-  console.log(calculatorRectangle.calculate()); 
-  console.log(calculatorCircle.calculate());
+  console.log(AreaCalculator.calculate(square));
+  console.log(AreaCalculator.calculate(rectangle));
+  console.log(AreaCalculator.calculate(circle));
