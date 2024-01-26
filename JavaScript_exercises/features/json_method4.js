@@ -10,16 +10,6 @@ const person = {
     age: 25,
   };
   
-const json = JSON.stringify(person, (key, value) => {
-  // Only include 'id' and 'age' properties in the JSON
-  if (key === 'id' || key === 'age') {
-    return value;
-  }
-  // Include a custom string for other properties
-  return `Information not found for ${key}`;
-});
-
-console.log(json);
-
+  const json = JSON.stringify(person, ['id', 'age']);
   
   console.log(json); // Should return: { id: 1, age: 25 }
