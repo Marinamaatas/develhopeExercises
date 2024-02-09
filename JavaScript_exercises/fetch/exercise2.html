@@ -1,0 +1,50 @@
+<html>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>Title</label>
+          <input type="text" id="todo-title" />
+        </div>
+        <div>
+          <label>Completed</label>
+          <input type="checkbox" id="todo-completed" />
+        </div>
+
+        <button type="submit" id="submit-todo">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  document.getElementById("container").addEventListener("submit", function(formSubmit) {
+    formSubmit.preventDefault();
+    let title = document.getElementById("todo-title").value;
+    let completed = document.getElementById("todo-completed").checked;
+});
+
+async function dataPromise('https://jsonplaceholder.typicode.com/posts', data = {}) {
+  const solution = await fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  });
+  return solution.json();
+}
+
+dataPromise('https://jsonplaceholder.typicode.com/posts', newData)
+  .then(data => {data ={title: ${`title`}, completed : ${`completed`}}
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
+  getTodos()
+    .then(data => console.log(data))
+    .catch(error => console.error(error))
+    .finally(() => console.log("End of program"))
+
+</script>
