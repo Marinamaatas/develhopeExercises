@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falcon React | ReactJS Dashboard & WebApp Template</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="seccion-2-m">
+        <section id="market-share-m">
+            <div id="content-ms-m">
+                <div id="caption-ms-m">
+            <h6 id="title-ms-m">Market Share</h6>
+            <div class="singular-caption-ms-m">
+                <div class="left-caption-ms-m">
+                <div class="circle-ms-m" id="circle-samsung-ms-m"></div>
+                <p class="name-caption-ms-m">Samsung</p>
+            </div>
+                <p class="percent-caption-ms-m">58%</p>
+            </div>
+            <div class="singular-caption-ms-m">
+                <div class="left-caption-ms-m">
+                <div class="circle-ms-m" id="circle-huawei-ms-m"></div>
+                <p class="name-caption-ms-m">Huawei</p>
+            </div>
+                <p class="percent-caption-ms-m">21%</p>
+            </div>
+            <div class="singular-caption-ms-m">
+                <div class="left-caption-ms-m">
+                <div class="circle-ms-m" id="circle-apple-ms-m"></div>
+                <p class="name-caption-ms-m">Apple</p>
+            </div>
+                <p class="percent-caption-ms-m">22%</p>
+            </div>
+        </div>
+        <div id="graphic-ms-m">
+            <canvas id="canvas-market-share-m" width="106" height="106"></canvas>
+        </div>
+        </div>
+        </section>
+        <section id="weather-m">
+            <div id="header-w-m">
+            <h6 id="title-w-m">Weather</h6>
+            <button id="three-dots-w-m">•••</button>
+        </div>
+        <div id="body-weather-m">
+            
+                <img id="img-weather-m">
+                <div id="center-side-body-weather-m">
+                <div id="text-weather-m">
+                <h6 id="city-weather-m">New York City</h6>
+                <p id="meteorology-weather-m"></p>
+                <p id="precipitation-weather-m"></p>
+                </div>
+            </div>
+            <div id="right-side-body-weather-m">
+                <p id="current-temperature-weather-m"></p>
+                <p id="general-temperature-weather-m"></p>
+            </div>
+        </div>
+        </section>
+    </section>
+    <section id="total-sales-m">
+        <div id="total-sales-header-m">
+            <h6 id="title-ts-m">Total Sales</h6>
+            <div id="left-header-ts-m">
+            <select id="months-ts-m">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            <button id="three-dots-ts-m">•••</button> <!--no son tres puntos, solucionarlo ASAP-->
+        </div>
+        </div>
+        <div id="container-chart-ts-m">
+        <canvas id="total-sales-chart-m" width="383" height="300"></canvas>
+    </div>
+    </section>
+    <div class="topProductsGraph">
+        <div class="headerTopProductsGraph">
+            <div class="titleTopProductsGraph">
+                <h5>Top Products</h5>
+            </div>
+            <div id="headerButtonsTopProductsGraph">
+                <div class="detailsTopProductsGraph">
+                    <a class="linkTopProductsGraph" href="/dashboard-alt#!">View Details</a>
+                </div>
+                <div class="optionsTopProductsGraph">
+                    <button type="button" class="optionsButtonTopProducts" id="optionsButtonTopProducts">•••</button>
+                    <div class="dropdownMenuTopProducts">
+                        <button type="button" role="menuitem" class="dropdownButtonTopProductsGraph">View</button>
+                        <button type="button" role="menuitem" class="dropdownButtonTopProductsGraph">Export</button>
+                        <hr style="border: 1px solid #edf2f9;">
+                        <button type="button" role="menuitem" class="removeButtonTopProductsGraph">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainTopProductsGraph">
+            <canvas id="mainTopProductsGraph"></canvas>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="textsFooter">
+            <div class="greatingsFooter">
+                <p class="textFooter">
+                    Thank you for creatin with Falcon | 2024  © 
+                    <a class="linkFooter" href="https://themewagon.com">Themewagon</a>
+                </p>
+            </div>
+            <div class="versionFooter">
+                <p class="textFooter">
+                    v2.10.2
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+<script src="main.js"></script>
+
