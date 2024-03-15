@@ -1,4 +1,4 @@
-import { createRoot } from "react";
+import { createRoot } from 'react-dom/client';
 
 export function AlertClock() {
     function ShowData() {
