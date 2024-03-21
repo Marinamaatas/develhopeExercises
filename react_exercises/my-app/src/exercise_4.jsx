@@ -25,5 +25,4 @@ function App() {
     );
 }
 
-// Render the App component instead of the Button component
 createRoot(document.getElementById('root')).render(<App />);
