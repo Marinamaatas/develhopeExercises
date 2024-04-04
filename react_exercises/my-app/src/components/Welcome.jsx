@@ -1,8 +1,9 @@
-import { createRoot } from "react-dom/client";
+
+
 import { Age } from "./Age";
 
 export function Welcome({name, age}){ //me lo marca en rojo porque no le indico el tipo de dato que le estoy pasando
-    return <div>
+    return <div className="welcome">
     <p>Welcome, {name}!</p>
     
     {age > 18 && <Age age={age} />}

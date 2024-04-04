@@ -20,15 +20,24 @@ export default function Login({ onLogin }){
             }
         })
     }
-    function handleLogin() {
-		console.log(data)
+    const handleLogin = (event) => {
+        event.preventDefault();
+        onLogin(data);
+      };
 
-		onLogin(data)
-	}
+    function handleResetButton(){
+        setData({
+            username: '',
+            password: '',
+            remember: false,
+    })
+    }
 
     return (
         <div>
+           
             <h1>Iniciar sesión</h1>
+            <form onSubmit={handleLogin}>
             <p>User name</p>
             <input name= "username" value={data.username} onChange={infoChange} />
             <p>Password</p>
@@ -36,7 +45,9 @@ export default function Login({ onLogin }){
             <p>Remember me</p>
             <input name="remember" type="checkbox" checked={data.remember} onChange={infoChange} />
             <br />
-            <button disabled={!data.username || !data.password}  onClick={handleLogin}>Log in</button>
+            <button disabled={!data.username || !data.password}>Log in</button>
+            <button onClick={handleResetButton}>Reset</button>
+            </form>
         </div>
     )
 }
