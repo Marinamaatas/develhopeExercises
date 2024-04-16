@@ -2,14 +2,20 @@ import React from 'react';
 import SelfTest2 from './components/SelfTest2';
 import TestClock from './components/TestClock';
 import TestCount from './components/TestCount';
+import PokeApiResult from './components/PokeApiExercise';
+import Login from './components/Login';
 
 export default function App() {
-
+  const handleLogin = (state) => {
+    console.log('Login state:', state);
+  };
   return (
   <div>
       <SelfTest2 />
       <TestClock />
       <TestCount value={21}/>
+      <PokeApiResult />
+      <Login  onLogin={handleLogin}  />
   </div>
    
   );

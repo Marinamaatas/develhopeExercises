@@ -1,0 +1,51 @@
+header {
+    width: 100%;
+    height: 200px;
+    background-color: lightpink;
+    display: flex;
+    align-items: flex-end;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: lightslategray;
+    width: 100%;
+}
+nav p{
+    margin-left: 20px;
+    border: 2px solid purple;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+}
+
+#articlesSection {
+    background-color: lightsalmon;
+    width: 70%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+article {
+    height: 100px;
+    width: 80%;
+    background-color: lightgreen;
+}
+#barraLateral {
+    width: 30%;
+    height: 400px;
+    background-color: lightskyblue;
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: lightseagreen;
+}
