@@ -1,11 +1,5 @@
-//EXERCISE 2
-import express from 'express';
-import 'express-async-errors';
-import morgan from 'morgan';
+import { Request, Response } from "express";
 import Joi from 'joi';
-
-const app = express();
-const port = 2121;
 
 type Planet = {
     id: number;
@@ -19,22 +13,10 @@ let planets: Planets = [
     { id: 2, name: "Mars"},
 ];
 
-app.use(express.json());
-app.use(morgan('dev'));
-
-
-const planetSchema = Joi.object({
-    id: Joi.number().required(),
-    name: Joi.string().required()
-});
-
-
-app.get("/api/planets", (req, res) => {
+const getAll = (req: Request, res:Response) => {
     res.json(planets);
-});
-
-
-app.get("/api/planets/:id", (req, res) => {
+};
+const getOneById = (req: Request, res:Response) => {
     const { id } = req.params;
     const planet = planets.find(p => p.id === Number(id));
     if (planet) {
@@ -42,10 +24,8 @@ app.get("/api/planets/:id", (req, res) => {
     } else {
         res.status(404).json({ error: "Planet not found" });
     }
-});
-
-
-app.post("/api/planets", (req, res)=> {
+};
+const create = (req: Request, res:Response)=> {
     const { id, name } = req.body;
 
     const validationResult = planetSchema.validate({ id, name });
@@ -57,10 +37,8 @@ app.post("/api/planets", (req, res)=> {
     planets.push(newPlanet);
 
     res.status(201).json({ msg: "The planet was created, thanks :)" });
-});
-
-
-app.put("/api/planets/:id", (req, res) => {
+}
+const updateById = (req: Request, res:Response) => {
     const { id } = req.params;
     const { name } = req.body;
 
@@ -76,10 +54,8 @@ app.put("/api/planets/:id", (req, res) => {
     } else {
         res.status(404).json({ error: "Planet not found" });
     }
-});
-
-
-app.delete("/api/planets/:id", (req, res) => {
+}
+const deleteById = (req: Request, res:Response) => {
     const { id } = req.params;
 
     const index = planets.findIndex(p => p.id === Number(id));
@@ -89,8 +65,6 @@ app.delete("/api/planets/:id", (req, res) => {
     } else {
         res.status(404).json({ error: "Planet not found" });
     }
-});
+}
 
-app.listen(port, () => {
-    console.log(`You can see this exercise in http://localhost:${port}`);
-});
+export {getAll, getOneById, create, updateById, deleteById}
