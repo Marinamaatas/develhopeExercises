@@ -46,5 +46,14 @@ const signUp = async (req: Request, res: Response) => {
         res.status(500).json({ msg: "Internal server error." });
     }
 };
-
-export { logIn, signUp };
+const logOut = async (req: Request, res: Response) => {
+    const user: any = req.user;
+    try {
+        await db.none(`UPDATE users SET token=NULL WHERE id=$1`, [user?.id]);
+        res.status(200).json({ msg: "Logout successful." });
+    } catch (error) {
+        console.error("Error logging out:", error);
+        res.status(500).json({ msg: "Internal server error." });
+    }
+};
+export { logIn, signUp, logOut };
