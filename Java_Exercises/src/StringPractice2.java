@@ -16,7 +16,7 @@ Print charArray*/
         combinedString.append(substring2);
 
         char[] charArray = combinedString.toString().toCharArray();
-        
+
         System.out.println(charArray);
     }
 }
